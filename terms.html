@@ -1,0 +1,512 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>NEBULA BAZAAR — Terms of Service · Cosmic Commerce</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: #fefaf5;
+            color: #1a1a2c;
+            line-height: 1.5;
+        }
+
+        :root {
+            --primary-deep: #2c1a4d;
+            --primary-glow: #6c3f9e;
+            --accent-gold: #e2b87a;
+            --accent-coral: #f2645a;
+            --soft-lavender: #f2e9ff;
+            --card-bg: #ffffff;
+            --shadow-sm: 0 8px 20px rgba(0, 0, 0, 0.03), 0 2px 6px rgba(0, 0, 0, 0.05);
+            --border-light: #ede6dc;
+        }
+
+        .container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 28px;
+        }
+
+        /* header / navigation (mirroring homepage) */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.2rem 0;
+            flex-wrap: wrap;
+            gap: 20px;
+            border-bottom: 1px solid var(--border-light);
+        }
+
+        .logo-area {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .brand-icon {
+            background: linear-gradient(135deg, var(--primary-deep), var(--primary-glow));
+            width: 44px;
+            height: 44px;
+            border-radius: 32px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 26px;
+            color: var(--accent-gold);
+            box-shadow: 0 4px 12px rgba(108, 63, 158, 0.25);
+        }
+
+        .brand-name {
+            font-size: 1.85rem;
+            font-weight: 800;
+            letter-spacing: -0.02em;
+            background: linear-gradient(120deg, #2c1a4d 20%, #b25f9a 80%);
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+        }
+
+        .brand-name span {
+            font-weight: 400;
+            color: var(--accent-coral);
+            background: none;
+            -webkit-background-clip: unset;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            font-weight: 500;
+            color: #2d2f3e;
+            transition: all 0.2s ease;
+            font-size: 1rem;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary-glow);
+        }
+
+        .nav-icons {
+            display: flex;
+            gap: 1.2rem;
+            font-size: 1.3rem;
+        }
+
+        .nav-icons i {
+            cursor: pointer;
+            transition: all 0.2s ease;
+            color: #2d2f3e;
+        }
+
+        .nav-icons i:hover {
+            color: var(--accent-coral);
+        }
+
+        /* terms hero section - minimal but unique */
+        .terms-hero {
+            background: linear-gradient(115deg, #f9efff 0%, #fff3e8 100%);
+            border-radius: 48px;
+            margin: 2rem 0 2rem 0;
+            padding: 2.2rem 2.5rem;
+            text-align: center;
+        }
+
+        .terms-hero h1 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            letter-spacing: -0.02em;
+            background: linear-gradient(135deg, #2c1a4d, #7a4ea8);
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+            margin-bottom: 0.75rem;
+        }
+
+        .terms-hero p {
+            color: #4a4a5a;
+            max-width: 680px;
+            margin: 0 auto;
+        }
+
+        .last-updated {
+            display: inline-block;
+            background: rgba(108, 63, 158, 0.12);
+            padding: 0.25rem 1rem;
+            border-radius: 50px;
+            font-size: 0.75rem;
+            margin-top: 1rem;
+            font-weight: 500;
+            color: var(--primary-glow);
+        }
+
+        /* main terms content */
+        .terms-content {
+            background: var(--card-bg);
+            border-radius: 48px;
+            padding: 2.5rem 2.8rem;
+            margin: 1.5rem 0 3rem;
+            box-shadow: var(--shadow-sm);
+            border: 1px solid #f1eae2;
+        }
+
+        .terms-section {
+            margin-bottom: 2.5rem;
+        }
+
+        .terms-section h2 {
+            font-size: 1.7rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: var(--primary-deep);
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .terms-section h2 i {
+            color: var(--accent-gold);
+            font-size: 1.6rem;
+        }
+
+        .terms-section h3 {
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin: 1.2rem 0 0.5rem 0;
+            color: #3b2b54;
+        }
+
+        .terms-section p {
+            margin-bottom: 0.9rem;
+            color: #2d2f3e;
+            font-weight: 400;
+            line-height: 1.6;
+        }
+
+        .terms-section ul, .terms-section ol {
+            margin: 0.8rem 0 1rem 1.8rem;
+            color: #2d2f3e;
+        }
+
+        .terms-section li {
+            margin-bottom: 0.5rem;
+        }
+
+        .highlight-box {
+            background: var(--soft-lavender);
+            border-left: 5px solid var(--primary-glow);
+            padding: 1.2rem 1.5rem;
+            border-radius: 24px;
+            margin: 1.5rem 0;
+            font-size: 0.95rem;
+        }
+
+        hr {
+            margin: 1.5rem 0;
+            border: 0;
+            height: 1px;
+            background: linear-gradient(to right, #e2dbd0, transparent);
+        }
+
+        /* back to shop button */
+        .back-link {
+            text-align: center;
+            margin: 1rem 0 2.5rem;
+        }
+
+        .btn-back {
+            background: transparent;
+            border: 1.5px solid var(--primary-deep);
+            padding: 0.7rem 1.8rem;
+            border-radius: 40px;
+            font-weight: 600;
+            color: var(--primary-deep);
+            transition: all 0.2s ease;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            text-decoration: none;
+        }
+
+        .btn-back:hover {
+            background: var(--primary-deep);
+            color: white;
+            border-color: var(--primary-deep);
+        }
+
+        /* footer */
+        footer {
+            background: #f9f6f2;
+            padding: 2rem 0 1.5rem;
+            border-top-left-radius: 40px;
+            border-top-right-radius: 40px;
+            margin-top: 1rem;
+        }
+
+        .footer-inner {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 1rem;
+            align-items: center;
+        }
+
+        .footer-copyright {
+            font-size: 0.8rem;
+            color: #6a6d86;
+        }
+
+        .footer-links a {
+            text-decoration: none;
+            color: #4b4e6b;
+            margin-left: 1.5rem;
+            font-size: 0.85rem;
+            font-weight: 500;
+        }
+
+        .footer-links a:hover {
+            color: var(--primary-glow);
+        }
+
+        @media (max-width: 760px) {
+            .navbar {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            .nav-links {
+                flex-wrap: wrap;
+                gap: 1rem;
+            }
+            .terms-content {
+                padding: 1.5rem;
+            }
+            .terms-hero h1 {
+                font-size: 1.9rem;
+            }
+            .footer-inner {
+                flex-direction: column;
+                text-align: center;
+            }
+            .footer-links a {
+                margin: 0 0.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <!-- Navigation (consistent with homepage) -->
+    <nav class="navbar">
+        <div class="logo-area">
+            <div class="brand-icon">
+                <i class="fas fa-glasses"></i>
+            </div>
+            <div class="brand-name">NEBULA <span>BAZAAR</span></div>
+        </div>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="privacy.html">Privacy</a>
+            <a href="terms.html">Terms</a>
+            <a href="about.html">About Us</a>
+            <div class="nav-icons">
+                <i class="far fa-heart"></i>
+                <i class="fas fa-shopping-bag"></i>
+                <i class="far fa-user"></i>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Terms hero section -->
+    <div class="terms-hero">
+        <h1>✦ Orbital Terms of Service ✦</h1>
+        <p>Welcome to Nebula Bazaar. By accessing our cosmic marketplace, you agree to these stellar guidelines. Please read carefully — your journey matters.</p>
+        <div class="last-updated"><i class="far fa-calendar-alt"></i> Last updated: June 10, 2026</div>
+    </div>
+
+    <!-- Main Terms Content -->
+    <div class="terms-content">
+        <!-- Section 1: Acceptance -->
+        <div class="terms-section">
+            <h2><i class="fas fa-globe-americas"></i> 1. Acceptance of Terms</h2>
+            <p>By visiting the website <strong>NEBULA BAZAAR</strong> (“we”, “us”, “our”), you agree to be bound by these Terms of Service (“Terms”), all applicable laws and regulations, and agree that you are responsible for compliance with any local laws. If you do not agree with any of these terms, you are prohibited from using or accessing this site. The materials contained in this website are protected by applicable copyright and trademark law.</p>
+        </div>
+
+        <!-- Section 2: Cosmic License -->
+        <div class="terms-section">
+            <h2><i class="fas fa-star-of-life"></i> 2. Galactic License to Use</h2>
+            <p>NEBULA BAZAAR grants you a limited, non-exclusive, non-transferable, revocable license to access and make personal, non-commercial use of our services and products. This license does not include:</p>
+            <ul>
+                <li>Any resale or commercial use of our products or content;</li>
+                <li>Copying, reproducing, or distributing any product images or descriptions without written consent;</li>
+                <li>Any derivative use of our site or its contents;</li>
+                <li>Using data mining, robots, or similar data gathering methods.</li>
+            </ul>
+            <div class="highlight-box">
+                <i class="fas fa-meteor" style="margin-right: 8px; color: #f2645a;"></i> <strong>Orbit integrity:</strong> Any unauthorized use terminates the permission or license granted by us.
+            </div>
+        </div>
+
+        <!-- Section 3: Products & Pricing -->
+        <div class="terms-section">
+            <h2><i class="fas fa-tags"></i> 3. Stellar Products & Pricing</h2>
+            <p>All product descriptions, pricing, and availability are subject to change without notice. We reserve the right to modify or discontinue any item (or service) at any time. We make every effort to display colors and imagery accurately, but we cannot guarantee that your device’s display reflects the exact cosmic tones.</p>
+            <p>Prices for our products are quoted in USD and do not include applicable taxes or shipping fees, which will be added at checkout. NEBULA BAZAAR is not responsible for pricing errors; in the event of a manifest error, we will cancel the order and provide a full refund.</p>
+        </div>
+
+        <!-- Section 4: Orders & Shipping -->
+        <div class="terms-section">
+            <h2><i class="fas fa-rocket"></i> 4. Orders & Interstellar Shipping</h2>
+            <p>When you place an order, you will receive an email confirmation. We reserve the right to refuse or cancel any order for reasons including but not limited to product availability, errors in the description or price, or suspicion of fraudulent activity. Shipping times are estimates and may vary due to cosmic events (carrier delays, holidays, etc.).</p>
+            <ul>
+                <li><strong>Delivery:</strong> We ship worldwide via partnered carriers. Risk of loss passes to you upon delivery.</li>
+                <li><strong>Tracking:</strong> A tracking number will be provided once your order has launched.</li>
+                <li><strong>Customs:</strong> International orders may be subject to import duties and taxes, which are the buyer’s responsibility.</li>
+            </ul>
+        </div>
+
+        <!-- Section 5: Returns & Refunds (Nebula Guarantee) -->
+        <div class="terms-section">
+            <h2><i class="fas fa-exchange-alt"></i> 5. Nebula Return Guarantee</h2>
+            <p>We stand behind the quality of our cosmic goods. If you are not entirely satisfied, you may return eligible items within 30 days of delivery. To be eligible, items must be unused, in original packaging, and with tags attached.</p>
+            <div class="highlight-box">
+                <i class="fas fa-moon" style="margin-right: 6px;"></i> <strong>Return process:</strong> Contact our Stellar Support team within 30 days. Refunds will be issued to the original payment method after inspection. Final sale items (marked “Nebula Archive”) are not returnable.
+            </div>
+            <p>Please note that return shipping costs are covered by the customer unless the return is due to our error. We recommend using a trackable shipping method.</p>
+        </div>
+
+        <!-- Section 6: User Accounts -->
+        <div class="terms-section">
+            <h2><i class="fas fa-user-astronaut"></i> 6. Account Responsibility</h2>
+            <p>To access certain features (like wishlist or order history), you may create an account. You are responsible for safeguarding your password and for all activities that occur under your account. You agree to notify us immediately of any breach of security. NEBULA BAZAAR will not be liable for any loss or damage arising from your failure to protect your account credentials.</p>
+        </div>
+
+        <!-- Section 7: Prohibited Conduct -->
+        <div class="terms-section">
+            <h2><i class="fas fa-ban"></i> 7. Prohibited Activities</h2>
+            <p>You agree not to engage in any of the following:</p>
+            <ul>
+                <li>Violating any local, state, national, or international law or regulation;</li>
+                <li>Attempting to interfere with the security or functionality of the website;</li>
+                <li>Uploading viruses, malware, or other malicious code;</li>
+                <li>Harassing, abusing, or harming another person (including other customers).</li>
+            </ul>
+            <p>Violation of these provisions may result in immediate termination of your access and legal action.</p>
+        </div>
+
+        <!-- Section 8: Intellectual Property -->
+        <div class="terms-section">
+            <h2><i class="fas fa-copyright"></i> 8. Cosmic IP & Ownership</h2>
+            <p>The content, logos, graphics, product designs, and all intellectual property displayed on NEBULA BAZAAR are the exclusive property of the brand and its licensors. Unauthorized use, reproduction, or distribution is strictly prohibited. The “NEBULA BAZAAR” name, our logo, and all related marks are our trademarks.</p>
+        </div>
+
+        <!-- Section 9: Disclaimer of Warranties -->
+        <div class="terms-section">
+            <h2><i class="fas fa-shield-alt"></i> 9. Disclaimer</h2>
+            <p>The materials on NEBULA BAZAAR's website are provided on an 'as is' basis. We make no warranties, expressed or implied, and hereby disclaim and negate all other warranties including, without limitation, implied warranties or conditions of merchantability, fitness for a particular purpose, or non-infringement of intellectual property or other violation of rights.</p>
+            <p>Further, we do not warrant or make any representations concerning the accuracy, likely results, or reliability of the use of the materials on its website or otherwise relating to such materials or on any sites linked to this site.</p>
+        </div>
+
+        <!-- Section 10: Limitation of Liability -->
+        <div class="terms-section">
+            <h2><i class="fas fa-balance-scale"></i> 10. Limitation of Liability</h2>
+            <p>In no event shall NEBULA BAZAAR or its suppliers be liable for any damages (including, without limitation, damages for loss of data or profit, or due to business interruption) arising out of the use or inability to use the materials on our website, even if we or an authorized representative has been notified orally or in writing of the possibility of such damage. Some jurisdictions do not allow limitations on implied warranties, or limitations of liability for consequential damages, so these limitations may not apply to you.</p>
+        </div>
+
+        <!-- Section 11: Indemnification -->
+        <div class="terms-section">
+            <h2><i class="fas fa-handshake"></i> 11. Indemnification</h2>
+            <p>You agree to indemnify, defend, and hold harmless NEBULA BAZAAR, its affiliates, officers, directors, employees, and agents from and against any claims, liabilities, damages, losses, and expenses, including reasonable legal fees, arising out of or in any way connected with your use of the site or violation of these Terms.</p>
+        </div>
+
+        <!-- Section 12: Modification & Severability -->
+        <div class="terms-section">
+            <h2><i class="fas fa-edit"></i> 12. Changes & Severability</h2>
+            <p>We reserve the right to revise these Terms at any time without prior notice. By using this website, you agree to be bound by the current version of these Terms. If any provision of these Terms is found to be unenforceable or invalid, that provision shall be limited or eliminated to the minimum extent necessary, and the remaining provisions shall remain in full force and effect.</p>
+        </div>
+
+        <!-- Section 13: Governing Law -->
+        <div class="terms-section">
+            <h2><i class="fas fa-gavel"></i> 13. Governing Law</h2>
+            <p>These Terms are governed by and construed in accordance with the laws of the State of California, without regard to its conflict of law provisions. Any disputes arising under these Terms shall be resolved exclusively in the state or federal courts located in Los Angeles County, California.</p>
+        </div>
+
+        <hr>
+        <div class="highlight-box" style="background: #fef2e6; border-left-color: var(--accent-coral);">
+            <i class="fas fa-envelope-open-text"></i> <strong>Need to reach our legal constellation?</strong><br>
+            For any questions regarding these Terms, please contact us at <strong>legal@nebulabazaar.com</strong> or via our Stellar Support portal.
+        </div>
+    </div>
+
+    <!-- Back to home / shop button -->
+    <div class="back-link">
+        <a href="#" class="btn-back" id="backToHomeBtn"><i class="fas fa-arrow-left"></i> Return to NEBULA BAZAAR</a>
+    </div>
+</div>
+
+<!-- Footer -->
+
+</footer>
+
+<script>
+    // Simple interactive touches to match homepage vibe + functional back button (demo)
+    const backBtn = document.getElementById('backToHomeBtn');
+    if (backBtn) {
+        backBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            // Demo behavior: show a toast/message & redirect to homepage (in a real scenario replace with actual index)
+            alert('✨ Returning to the main NEBULA BAZAAR galaxy... ✨');
+            // Simulate navigation to home (if you were on a multi-page setup you can change window.location)
+            // For demo: display message, but we can also redirect to "/" but since this is a standalone page we keep informative.
+            window.location.href = '#';  // keep placeholder; user can manually go to homepage.
+            // In a full integration this link would point to index.html; for now we just show success.
+        });
+    }
+
+    // Interactive navbar bag/heart icons (demo)
+    const bagIcon = document.querySelector('.fa-shopping-bag');
+    if(bagIcon) {
+        bagIcon.addEventListener('click', () => {
+            alert('🛸 Your cosmic bag awaits — discover stellar deals on the home page!');
+        });
+    }
+    const heartIcon = document.querySelector('.fa-heart');
+    if(heartIcon) {
+        heartIcon.addEventListener('click', () => {
+            alert('❤️ Save interstellar favorites — create an account to build your wishlist.');
+        });
+    }
+
+    // Also adding smooth scroll for any anchor (just UX)
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            const targetId = this.getAttribute('href');
+            if(targetId !== "#" && targetId !== "") {
+                const targetElem = document.querySelector(targetId);
+                if(targetElem) {
+                    e.preventDefault();
+                    targetElem.scrollIntoView({ behavior: 'smooth' });
+                }
+            }
+        });
+    });
+</script>
+</body>
+</html>
