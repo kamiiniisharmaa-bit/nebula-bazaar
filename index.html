@@ -1,0 +1,747 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>NEBULA BAZAAR — Cosmic Commerce</title>
+    <!-- Google Fonts + simple reset -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: #fefaf5;
+            color: #1a1a2c;
+            scroll-behavior: smooth;
+        }
+
+        /* unique brand color palette — cosmic meets organic */
+        :root {
+            --primary-deep: #2c1a4d;
+            --primary-glow: #6c3f9e;
+            --accent-gold: #e2b87a;
+            --accent-coral: #f2645a;
+            --soft-lavender: #f2e9ff;
+            --card-bg: #ffffff;
+            --shadow-sm: 0 8px 20px rgba(0, 0, 0, 0.03), 0 2px 6px rgba(0, 0, 0, 0.05);
+            --shadow-md: 0 20px 35px -12px rgba(0, 0, 0, 0.1);
+            --transition: all 0.25s ease;
+        }
+
+        /* container */
+        .container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 28px;
+        }
+
+        /* header & navigation */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.2rem 0;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .logo-area {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .brand-icon {
+            background: linear-gradient(135deg, var(--primary-deep), var(--primary-glow));
+            width: 44px;
+            height: 44px;
+            border-radius: 32px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 26px;
+            color: var(--accent-gold);
+            box-shadow: 0 4px 12px rgba(108, 63, 158, 0.25);
+        }
+
+        .brand-name {
+            font-size: 1.85rem;
+            font-weight: 800;
+            letter-spacing: -0.02em;
+            background: linear-gradient(120deg, #2c1a4d 20%, #b25f9a 80%);
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+        }
+
+        .brand-name span {
+            font-weight: 400;
+            color: var(--accent-coral);
+            background: none;
+            -webkit-background-clip: unset;
+            background-clip: unset;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            font-weight: 500;
+            color: #2d2f3e;
+            transition: var(--transition);
+            font-size: 1rem;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary-glow);
+        }
+
+        .nav-icons {
+            display: flex;
+            gap: 1.2rem;
+            font-size: 1.3rem;
+        }
+
+        .nav-icons i {
+            cursor: pointer;
+            transition: var(--transition);
+            color: #2d2f3e;
+        }
+
+        .nav-icons i:hover {
+            color: var(--accent-coral);
+            transform: scale(1.05);
+        }
+
+        /* hero section — stellar vibe */
+        .hero {
+            background: linear-gradient(105deg, #fff3e8 0%, #f9efff 100%);
+            border-radius: 48px;
+            margin: 1.5rem 0 2.5rem 0;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .hero-grid {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+            padding: 3rem 2.5rem;
+            gap: 2rem;
+        }
+
+        .hero-text {
+            flex: 1.2;
+            min-width: 260px;
+        }
+
+        .hero-text .badge {
+            background: rgba(108, 63, 158, 0.12);
+            display: inline-block;
+            padding: 0.3rem 1rem;
+            border-radius: 40px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            color: var(--primary-glow);
+            margin-bottom: 1.2rem;
+            backdrop-filter: blur(2px);
+        }
+
+        .hero-text h1 {
+            font-size: 3.3rem;
+            line-height: 1.2;
+            font-weight: 800;
+            letter-spacing: -0.02em;
+            margin-bottom: 1.25rem;
+            color: #1e102f;
+        }
+
+        .hero-text p {
+            font-size: 1.1rem;
+            color: #4a4a5a;
+            margin-bottom: 2rem;
+            max-width: 90%;
+        }
+
+        .cta-group {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .btn-primary {
+            background: var(--primary-deep);
+            border: none;
+            padding: 0.9rem 2rem;
+            border-radius: 60px;
+            font-weight: 600;
+            color: white;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: var(--transition);
+            box-shadow: 0 6px 14px rgba(44, 26, 77, 0.2);
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .btn-primary:hover {
+            background: #401a6b;
+            transform: translateY(-3px);
+        }
+
+        .btn-outline {
+            background: transparent;
+            border: 1.5px solid var(--primary-deep);
+            padding: 0.85rem 2rem;
+            border-radius: 60px;
+            font-weight: 600;
+            color: var(--primary-deep);
+            transition: var(--transition);
+            cursor: pointer;
+        }
+
+        .btn-outline:hover {
+            background: var(--primary-deep);
+            color: white;
+            border-color: var(--primary-deep);
+        }
+
+        .hero-image {
+            flex: 0.8;
+            text-align: center;
+        }
+
+        .hero-image img {
+            max-width: 100%;
+            border-radius: 36px;
+            box-shadow: var(--shadow-md);
+        }
+
+        /* features strip */
+        .features {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 1.8rem;
+            background: white;
+            padding: 2rem 2rem;
+            border-radius: 80px;
+            margin: 2rem 0 3rem;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .feature-item {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+
+        .feature-item i {
+            font-size: 1.6rem;
+            color: var(--primary-glow);
+        }
+
+        /* category section */
+        .section-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            flex-wrap: wrap;
+            margin: 3rem 0 1.5rem 0;
+        }
+
+        .section-header h2 {
+            font-size: 2rem;
+            font-weight: 700;
+            letter-spacing: -0.01em;
+        }
+
+        .section-link {
+            color: var(--primary-glow);
+            font-weight: 500;
+            cursor: pointer;
+        }
+
+        .category-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 2.5rem;
+        }
+
+        .category-card {
+            background: var(--card-bg);
+            border-radius: 28px;
+            padding: 1.8rem 1rem;
+            text-align: center;
+            transition: var(--transition);
+            box-shadow: var(--shadow-sm);
+            border: 1px solid rgba(108, 63, 158, 0.08);
+            cursor: pointer;
+        }
+
+        .category-card:hover {
+            transform: translateY(-6px);
+            box-shadow: var(--shadow-md);
+            border-color: var(--accent-gold);
+        }
+
+        .category-icon {
+            font-size: 2.8rem;
+            margin-bottom: 0.8rem;
+            color: var(--primary-glow);
+        }
+
+        .category-card h4 {
+            font-weight: 600;
+            margin-bottom: 6px;
+        }
+
+        /* product grid */
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+            gap: 2rem;
+            margin: 1rem 0 3rem;
+        }
+
+        .product-card {
+            background: white;
+            border-radius: 28px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            box-shadow: var(--shadow-sm);
+            position: relative;
+        }
+
+        .product-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 25px 35px -12px rgba(0, 0, 0, 0.15);
+        }
+
+        .product-badge {
+            position: absolute;
+            top: 16px;
+            left: 16px;
+            background: var(--accent-coral);
+            color: white;
+            font-size: 0.7rem;
+            font-weight: 700;
+            padding: 4px 12px;
+            border-radius: 30px;
+            z-index: 2;
+        }
+
+        .product-img {
+            width: 100%;
+            aspect-ratio: 1 / 1;
+            object-fit: cover;
+            transition: transform 0.4s;
+        }
+
+        .product-card:hover .product-img {
+            transform: scale(1.02);
+        }
+
+        .product-info {
+            padding: 1.25rem 1rem 1.3rem;
+        }
+
+        .product-title {
+            font-weight: 700;
+            font-size: 1.1rem;
+            margin-bottom: 0.35rem;
+        }
+
+        .product-price {
+            font-weight: 700;
+            color: var(--primary-deep);
+            font-size: 1.2rem;
+            margin: 0.5rem 0 0.8rem;
+        }
+
+        .add-to-cart {
+            background: var(--soft-lavender);
+            border: none;
+            padding: 8px 0;
+            border-radius: 40px;
+            font-weight: 600;
+            width: 100%;
+            cursor: pointer;
+            transition: var(--transition);
+            color: var(--primary-deep);
+            font-size: 0.85rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+        }
+
+        .add-to-cart:hover {
+            background: var(--primary-deep);
+            color: white;
+        }
+
+        /* newsletter */
+        .newsletter {
+            background: linear-gradient(115deg, #2c1a4d 0%, #4a2c6d 100%);
+            border-radius: 48px;
+            padding: 3rem 2.5rem;
+            margin: 3rem 0 2rem;
+            text-align: center;
+            color: white;
+        }
+
+        .newsletter h3 {
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 0.8rem;
+        }
+
+        .newsletter p {
+            opacity: 0.85;
+            max-width: 500px;
+            margin: 0 auto 1.5rem;
+        }
+
+        .news-form {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 12px;
+        }
+
+        .news-form input {
+            padding: 0.9rem 1.5rem;
+            border-radius: 60px;
+            border: none;
+            width: 280px;
+            font-size: 0.9rem;
+        }
+
+        .news-form button {
+            background: var(--accent-gold);
+            border: none;
+            padding: 0.9rem 2rem;
+            border-radius: 60px;
+            font-weight: 700;
+            color: #2c1a4d;
+            cursor: pointer;
+            transition: 0.2s;
+        }
+
+        .news-form button:hover {
+            background: #f3ce9c;
+            transform: scale(0.98);
+        }
+
+        /* footer */
+        footer {
+            background: #f9f6f2;
+            padding: 2.5rem 0 2rem;
+            margin-top: 2.5rem;
+            border-top-left-radius: 40px;
+            border-top-right-radius: 40px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 2rem;
+        }
+
+        .footer-col p {
+            color: #4b4e6b;
+            line-height: 1.5;
+            margin-top: 0.5rem;
+        }
+
+        .footer-col h4 {
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        .footer-col ul {
+            list-style: none;
+        }
+
+        .footer-col li {
+            margin-bottom: 0.6rem;
+            cursor: pointer;
+            color: #4b4e6b;
+            transition: 0.2s;
+        }
+
+        .footer-col li:hover {
+            color: var(--primary-glow);
+        }
+
+        .copyright {
+            text-align: center;
+            margin-top: 2.5rem;
+            padding-top: 1rem;
+            border-top: 1px solid #e2dbd0;
+            font-size: 0.8rem;
+            color: #6a6d86;
+        }
+
+        /* responsive */
+        @media (max-width: 760px) {
+            .hero-text h1 {
+                font-size: 2.3rem;
+            }
+            .navbar {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            .nav-links {
+                flex-wrap: wrap;
+                gap: 1rem;
+            }
+            .hero-grid {
+                padding: 2rem 1.5rem;
+            }
+            .features {
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <!-- Header with unique branding: NEBULA BAZAAR -->
+    <nav class="navbar">
+        <div class="logo-area">
+            <div class="brand-icon">
+                <i class="fas fa-glasses"></i>
+            </div>
+            <div class="brand-name">NEBULA <span>BAZAAR</span></div>
+        </div>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="privacy.html">Privacy</a>
+            <a href="terms.html">Terms</a>
+            <a href="about.html">About Us</a>
+            <div class="nav-icons">
+                <i class="far fa-heart"></i>
+                <i class="fas fa-shopping-bag"></i>
+                <i class="far fa-user"></i>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero section: Cosmic elegance -->
+    <div class="hero">
+        <div class="hero-grid">
+            <div class="hero-text">
+                <div class="badge">✨ limited edition drop</div>
+                <h1>Where the cosmos<br>meets your style.</h1>
+                <p>Discover celestial designs, sustainable craftsmanship, and futuristic essentials — curated for dreamers and doers.</p>
+                <div class="cta-group">
+                    <button class="btn-primary">Explore collection <i class="fas fa-arrow-right"></i></button>
+                    <button class="btn-outline">Watch film <i class="fas fa-play"></i></button>
+                </div>
+            </div>
+            <div class="hero-image">
+                <!-- abstract cosmic fashion placeholder: creative SVG base -->
+                <svg width="280" height="280" viewBox="0 0 280 280" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="140" cy="140" r="120" fill="url(#grad1)" stroke="#E2B87A" stroke-width="2"/>
+                    <path d="M90 130 L190 130 M105 90 L175 170 M80 160 L160 80" stroke="#F2645A" stroke-width="2.5" stroke-dasharray="6 5"/>
+                    <circle cx="140" cy="100" r="14" fill="#F9EEDB" stroke="#6C3F9E" stroke-width="2"/>
+                    <circle cx="180" cy="150" r="10" fill="#FFF2E5" stroke="#2C1A4D" stroke-width="2"/>
+                    <circle cx="100" cy="180" r="12" fill="#FDF2E8" stroke="#E2B87A" stroke-width="2"/>
+                    <path d="M140 220 L140 190 M125 210 L155 210" stroke="#6C3F9E" stroke-width="2.5" stroke-linecap="round"/>
+                    <defs>
+                        <radialGradient id="grad1" cx="50%" cy="50%" r="50%" fx="30%" fy="30%">
+                            <stop offset="0%" stop-color="#F2E9FF"/>
+                            <stop offset="100%" stop-color="#FEFAF5"/>
+                        </radialGradient>
+                    </defs>
+                </svg>
+            </div>
+        </div>
+    </div>
+
+    <!-- unique trust badges / features -->
+    <div class="features">
+        <div class="feature-item"><i class="fas fa-gem"></i> <span>Certified cosmic materials</span></div>
+        <div class="feature-item"><i class="fas fa-shipping-fast"></i> <span>Stellar delivery</span></div>
+        <div class="feature-item"><i class="fas fa-star-of-life"></i> <span>30-day nebula returns</span></div>
+        <div class="feature-item"><i class="fas fa-leaf"></i> <span>Carbon-negative packaging</span></div>
+    </div>
+
+    <!-- Categories - orbit styled -->
+    <div class="section-header">
+        <h2>Shop by Constellation</h2>
+        <div class="section-link">View all <i class="fas fa-chevron-right"></i></div>
+    </div>
+    <div class="category-grid">
+        <div class="category-card"><div class="category-icon"><i class="fas fa-moon"></i></div><h4>Lunar</h4><p>minimalist</p></div>
+        <div class="category-card"><div class="category-icon"><i class="fas fa-meteor"></i></div><h4>Meteor</h4><p>bold accents</p></div>
+        <div class="category-card"><div class="category-icon"><i class="fas fa-saturn"></i></div><h4>Saturn Rings</h4><p>sculptural</p></div>
+        <div class="category-card"><div class="category-icon"><i class="fas fa-spa"></i></div><h4>Nebula</h4><p>dreamy tones</p></div>
+    </div>
+
+    <!-- Featured products: unique product names that fit branding -->
+    <div class="section-header">
+        <h2>✦ Bestsellers from the beyond</h2>
+        <div class="section-link">Shop all →</div>
+    </div>
+    <div class="product-grid" id="product-grid">
+        <!-- product cards will be populated with JS -->
+    </div>
+
+    <!-- newsletter capture -->
+    <div class="newsletter">
+        <h3>Subscribe to the Astral Drop</h3>
+        <p>Be the first to explore new arrivals, cosmic collabs, and secret sales.</p>
+        <div class="news-form">
+            <input type="email" placeholder="Your stellar email" id="newsEmail">
+            <button id="newsBtn">Subscribe →</button>
+        </div>
+        <p style="font-size: 0.7rem; margin-top: 1rem;">No spam, only stardust.</p>
+    </div>
+</div>
+
+<!-- footer -->
+<footer>
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-col">
+                <div class="brand-name" style="font-size: 1.5rem;">NEBULA BAZAAR</div>
+                <p>Curated for galactic souls. Radical design, timeless energy.</p>
+            </div>
+            <div class="footer-col">
+                
+            </div>
+        </div>
+        <div class="copyright">
+            © 2025 NEBULA BAZAAR — infinite imagination. All rights reserved.
+        </div>
+    </div>
+</footer>
+
+<script>
+    // product data with unique & brand-fused names
+    const products = [
+        { id: 1, name: "Orion’s Oversized Blazer", price: 189, badge: "Best Seller", img: "https://placehold.co/600x600/EEE5F2/4A2C6D?text=Orion+Blazer", alt: "cosmic blazer" },
+        { id: 2, name: "Nebula Drift Sweater", price: 98, badge: "Eco", img: "https://placehold.co/600x600/F3E9FA/2C1A4D?text=Nebula+Sweater", alt: "dream knit" },
+        { id: 3, name: "Stellar Hoop Earrings", price: 49, badge: "New", img: "https://placehold.co/600x600/FAF0E6/AD7F5F?text=Stellar+Hoop", alt: "hoop earrings" },
+        { id: 4, name: "Cosmic Tote (Large)", price: 75, badge: "", img: "https://placehold.co/600x600/EADDFF/6C3F9E?text=Cosmic+Tote", alt: "tote bag" },
+        { id: 5, name: "Astral Tech Gloves", price: 39, badge: "Trending", img: "https://placehold.co/600x600/FCE8DF/BC5A4C?text=Tech+Gloves", alt: "smart gloves" },
+        { id: 6, name: "Moon Phase Hoodie", price: 129, badge: "", img: "https://placehold.co/600x600/D9E8FA/2C3E5C?text=Moon+Hoodie", alt: "hoodie moon print" }
+    ];
+
+    const productGrid = document.getElementById('product-grid');
+
+    function renderProducts() {
+        productGrid.innerHTML = '';
+        products.forEach(product => {
+            const card = document.createElement('div');
+            card.classList.add('product-card');
+            
+            // badge html if exists
+            let badgeHtml = '';
+            if (product.badge) {
+                badgeHtml = `<div class="product-badge">${product.badge}</div>`;
+            }
+            
+            card.innerHTML = `
+                ${badgeHtml}
+                <img class="product-img" src="${product.img}" alt="${product.alt}" loading="lazy">
+                <div class="product-info">
+                    <div class="product-title">${product.name}</div>
+                    <div class="product-price">$${product.price}</div>
+                    <button class="add-to-cart" data-id="${product.id}"><i class="fas fa-star"></i> Add to orbit</button>
+                </div>
+            `;
+            productGrid.appendChild(card);
+        });
+        
+        // attach event listeners to all "Add to orbit" buttons
+        document.querySelectorAll('.add-to-cart').forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                e.stopPropagation();
+                const id = parseInt(btn.getAttribute('data-id'));
+                const product = products.find(p => p.id === id);
+                if(product) {
+                    alert(`✨ ${product.name} added to your cosmic bag! ✨`);
+                    // optionally visual micro-interaction
+                } else {
+                    alert('Item added!');
+                }
+            });
+        });
+    }
+    
+    renderProducts();
+    
+    // newsletter subscription simple popup
+    const newsBtn = document.getElementById('newsBtn');
+    const newsEmail = document.getElementById('newsEmail');
+    if(newsBtn) {
+        newsBtn.addEventListener('click', () => {
+            const email = newsEmail.value.trim();
+            if(email && email.includes('@')) {
+                alert(`🌌 Thank you, stellar being! ${email} is now registered for cosmic updates.`);
+                newsEmail.value = '';
+            } else {
+                alert('Please enter a valid email address to receive astral vibes ✨');
+            }
+        });
+    }
+    
+    // interactive for category cards (just demo)
+    const categoryCards = document.querySelectorAll('.category-card');
+    categoryCards.forEach(card => {
+        card.addEventListener('click', () => {
+            const categoryName = card.querySelector('h4')?.innerText || 'this constellation';
+            alert(`🌙 Exploring the ${categoryName} collection — soon ready for takeoff!`);
+        });
+    });
+    
+    // additional micro interactions for hero buttons
+    const primaryBtn = document.querySelector('.btn-primary');
+    if(primaryBtn) {
+        primaryBtn.addEventListener('click', () => {
+            alert('🚀 Welcome to the full Nebula Bazaar — new arrivals await!');
+        });
+    }
+    const outlineBtn = document.querySelector('.btn-outline');
+    if(outlineBtn) {
+        outlineBtn.addEventListener('click', () => {
+            alert('🎥 Watch the short film “Beyond the Veil” coming soon.');
+        });
+    }
+    // nav icons mini interaction
+    const bagIcon = document.querySelector('.fa-shopping-bag');
+    if(bagIcon) {
+        bagIcon.addEventListener('click', () => {
+            alert('Your orbital bag is ready — 0 items, start exploring!');
+        });
+    }
+    const heartIcon = document.querySelector('.fa-heart');
+    if(heartIcon) {
+        heartIcon.addEventListener('click', () => {
+            alert('❤️ Save your favorite pieces — wishlist is under development but will be cosmic!');
+        });
+    }
+</script>
+</body>
+</html>
