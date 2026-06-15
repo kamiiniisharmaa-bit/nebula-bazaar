@@ -1,0 +1,622 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>NEBULA BAZAAR — About Us · The Cosmic Collective</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: #fefaf5;
+            color: #1a1a2c;
+            line-height: 1.5;
+        }
+
+        :root {
+            --primary-deep: #2c1a4d;
+            --primary-glow: #6c3f9e;
+            --accent-gold: #e2b87a;
+            --accent-coral: #f2645a;
+            --soft-lavender: #f2e9ff;
+            --card-bg: #ffffff;
+            --shadow-sm: 0 8px 20px rgba(0, 0, 0, 0.03), 0 2px 6px rgba(0, 0, 0, 0.05);
+            --shadow-md: 0 20px 35px -12px rgba(0, 0, 0, 0.1);
+            --border-light: #ede6dc;
+        }
+
+        .container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 28px;
+        }
+
+        /* navigation (consistent) */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.2rem 0;
+            flex-wrap: wrap;
+            gap: 20px;
+            border-bottom: 1px solid var(--border-light);
+        }
+
+        .logo-area {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .brand-icon {
+            background: linear-gradient(135deg, var(--primary-deep), var(--primary-glow));
+            width: 44px;
+            height: 44px;
+            border-radius: 32px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 26px;
+            color: var(--accent-gold);
+            box-shadow: 0 4px 12px rgba(108, 63, 158, 0.25);
+        }
+
+        .brand-name {
+            font-size: 1.85rem;
+            font-weight: 800;
+            letter-spacing: -0.02em;
+            background: linear-gradient(120deg, #2c1a4d 20%, #b25f9a 80%);
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+        }
+
+        .brand-name span {
+            font-weight: 400;
+            color: var(--accent-coral);
+            background: none;
+            -webkit-background-clip: unset;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            font-weight: 500;
+            color: #2d2f3e;
+            transition: all 0.2s ease;
+            font-size: 1rem;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary-glow);
+        }
+
+        .nav-icons {
+            display: flex;
+            gap: 1.2rem;
+            font-size: 1.3rem;
+        }
+
+        .nav-icons i {
+            cursor: pointer;
+            transition: all 0.2s ease;
+            color: #2d2f3e;
+        }
+
+        .nav-icons i:hover {
+            color: var(--accent-coral);
+        }
+
+        /* about hero — stellar story */
+        .about-hero {
+            background: linear-gradient(105deg, #fff3e8 0%, #f9efff 100%);
+            border-radius: 48px;
+            margin: 2rem 0 2rem 0;
+            padding: 3rem 2.5rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .about-hero h1 {
+            font-size: 2.8rem;
+            font-weight: 800;
+            letter-spacing: -0.02em;
+            background: linear-gradient(135deg, #2c1a4d, #7a4ea8);
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+            margin-bottom: 1rem;
+        }
+
+        .about-hero .tagline {
+            font-size: 1.25rem;
+            max-width: 700px;
+            margin: 0 auto;
+            color: #4a4a5a;
+        }
+
+        .hero-ornament {
+            margin-top: 1.5rem;
+            font-size: 2rem;
+            opacity: 0.6;
+            letter-spacing: 8px;
+        }
+
+        /* mission statement block */
+        .mission-block {
+            background: var(--primary-deep);
+            border-radius: 48px;
+            padding: 2.8rem 2rem;
+            margin: 2rem 0 2rem;
+            color: white;
+            text-align: center;
+        }
+
+        .mission-block h2 {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: var(--accent-gold);
+        }
+
+        .mission-block p {
+            max-width: 800px;
+            margin: 0 auto;
+            font-size: 1.1rem;
+            line-height: 1.5;
+            opacity: 0.92;
+        }
+
+        /* story grid */
+        .story-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            margin: 3rem 0 3rem;
+            align-items: center;
+        }
+
+        .story-text {
+            flex: 1.2;
+        }
+
+        .story-text h2 {
+            font-size: 1.9rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: var(--primary-deep);
+        }
+
+        .story-text p {
+            margin-bottom: 1rem;
+            color: #3e3f55;
+        }
+
+        .story-image {
+            flex: 0.9;
+            background: linear-gradient(145deg, #f2e9ff, #ffece0);
+            border-radius: 40px;
+            padding: 1.5rem;
+            text-align: center;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .story-image i {
+            font-size: 5rem;
+            color: var(--primary-glow);
+            margin-bottom: 0.5rem;
+        }
+
+        .story-image p {
+            font-weight: 500;
+            color: var(--primary-deep);
+            margin-top: 0.5rem;
+        }
+
+        /* values section */
+        .values-section {
+            margin: 3rem 0;
+        }
+
+        .values-header {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .values-header h2 {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--primary-deep);
+        }
+
+        .values-header p {
+            color: #5a5b70;
+        }
+
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 1.8rem;
+        }
+
+        .value-card {
+            background: var(--card-bg);
+            border-radius: 32px;
+            padding: 2rem 1.5rem;
+            text-align: center;
+            box-shadow: var(--shadow-sm);
+            transition: all 0.3s ease;
+            border: 1px solid #f3ede6;
+        }
+
+        .value-card:hover {
+            transform: translateY(-6px);
+            box-shadow: var(--shadow-md);
+            border-color: var(--accent-gold);
+        }
+
+        .value-icon {
+            font-size: 2.5rem;
+            color: var(--primary-glow);
+            margin-bottom: 1rem;
+        }
+
+        .value-card h3 {
+            font-size: 1.4rem;
+            margin-bottom: 0.6rem;
+            font-weight: 700;
+        }
+
+        .value-card p {
+            color: #4e4f68;
+            font-size: 0.9rem;
+        }
+
+        /* team / founders highlight */
+        .team-spotlight {
+            background: var(--soft-lavender);
+            border-radius: 48px;
+            padding: 2.5rem;
+            margin: 2rem 0;
+        }
+
+        .team-spotlight h2 {
+            text-align: center;
+            margin-bottom: 2rem;
+            font-size: 1.9rem;
+            color: var(--primary-deep);
+        }
+
+        .founders {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 2rem;
+        }
+
+        .founder {
+            text-align: center;
+            width: 220px;
+        }
+
+        .avatar {
+            width: 120px;
+            height: 120px;
+            background: linear-gradient(145deg, var(--primary-glow), #a06bbe);
+            border-radius: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1rem;
+            font-size: 3rem;
+            color: white;
+            box-shadow: 0 12px 18px -8px rgba(108, 63, 158, 0.4);
+        }
+
+        .founder h4 {
+            font-weight: 700;
+            font-size: 1.2rem;
+        }
+
+        .founder p {
+            font-size: 0.85rem;
+            color: #5d4e72;
+        }
+
+        /* sustainability / impact */
+        .impact-block {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            background: white;
+            border-radius: 40px;
+            padding: 2rem;
+            margin: 2rem 0;
+            border: 1px solid var(--border-light);
+        }
+
+        .impact-item {
+            flex: 1;
+            text-align: center;
+            padding: 1rem;
+        }
+
+        .impact-number {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: var(--accent-coral);
+        }
+
+        /* back link */
+        .back-link {
+            text-align: center;
+            margin: 2rem 0 2.5rem;
+        }
+
+        .btn-back {
+            background: transparent;
+            border: 1.5px solid var(--primary-deep);
+            padding: 0.7rem 1.8rem;
+            border-radius: 40px;
+            font-weight: 600;
+            color: var(--primary-deep);
+            transition: all 0.2s ease;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            text-decoration: none;
+        }
+
+        .btn-back:hover {
+            background: var(--primary-deep);
+            color: white;
+            border-color: var(--primary-deep);
+        }
+
+        footer {
+            background: #f9f6f2;
+            padding: 2rem 0 1.5rem;
+            border-top-left-radius: 40px;
+            border-top-right-radius: 40px;
+            margin-top: 1rem;
+        }
+
+        .footer-inner {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 1rem;
+            align-items: center;
+        }
+
+        .footer-copyright {
+            font-size: 0.8rem;
+            color: #6a6d86;
+        }
+
+        .footer-links a {
+            text-decoration: none;
+            color: #4b4e6b;
+            margin-left: 1.5rem;
+            font-size: 0.85rem;
+            font-weight: 500;
+        }
+
+        .footer-links a:hover {
+            color: var(--primary-glow);
+        }
+
+        @media (max-width: 760px) {
+            .navbar {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            .nav-links {
+                flex-wrap: wrap;
+                gap: 1rem;
+            }
+            .about-hero h1 {
+                font-size: 2rem;
+            }
+            .story-grid {
+                flex-direction: column;
+            }
+            .footer-inner {
+                flex-direction: column;
+                text-align: center;
+            }
+            .footer-links a {
+                margin: 0 0.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <!-- Navigation (consistent) -->
+    <nav class="navbar">
+        <div class="logo-area">
+            <div class="brand-icon">
+                <i class="fas fa-glasses"></i>
+            </div>
+            <div class="brand-name">NEBULA <span>BAZAAR</span></div>
+        </div>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="privacy.html">Privacy</a>
+            <a href="terms.html">Terms</a>
+            <a href="about.html">About Us</a>
+            <div class="nav-icons">
+                <i class="far fa-heart"></i>
+                <i class="fas fa-shopping-bag"></i>
+                <i class="far fa-user"></i>
+            </div>
+        </div>
+    </nav>
+
+    <!-- About Hero -->
+    <div class="about-hero">
+        <h1>✨ We are the architects of the extraordinary</h1>
+        <div class="tagline">NEBULA BAZAAR isn't just a store — it's a gathering of curious minds, bold creators, and cosmic dreamers. We design for those who see beyond the ordinary.</div>
+        <div class="hero-ornament">
+            <i class="fas fa-star"></i> <i class="fas fa-moon"></i> <i class="fas fa-meteor"></i>
+        </div>
+    </div>
+
+    <!-- Mission Statement -->
+    <div class="mission-block">
+        <h2>🪐 Our mission: to ignite wonder</h2>
+        <p>We believe that what you wear and use tells a story. Our mission is to blend artistry, sustainable innovation, and celestial storytelling — creating products that feel like they belong to a universe bigger than ourselves. Every piece, from apparel to accessories, carries the spirit of discovery.</p>
+    </div>
+
+    <!-- Origin Story -->
+    <div class="story-grid">
+        <div class="story-text">
+            <h2>🌌 The origin story</h2>
+            <p>Founded in 2023 by two designers disillusioned with fast fashion, NEBULA BAZAAR started as a small studio in Los Angeles. We wanted to build more than a brand — we wanted a movement that honors craftsmanship, reduces waste, and brings a sense of the infinite to everyday life.</p>
+            <p>Inspired by vintage astronomy charts, zero-waste manufacturing, and the fluid beauty of nebulas, we began creating limited-edition collections that feel both timeless and futuristic. Today, we partner with ethical factories and independent artists across the globe, weaving a tapestry of imagination and responsibility.</p>
+            <p>Our name represents the union of two forces: the limitless expanse of a nebula and the vibrant exchange of a bazaar. We invite you to explore, discover, and make the cosmos your own.</p>
+        </div>
+        <div class="story-image">
+            <i class="fas fa-glasses"></i>
+            <p>✦ Founder's desk, filled with star charts & fabric swatches ✦</p>
+            <i class="fas fa-palette" style="font-size: 2rem; margin-top: 0.8rem; color: var(--accent-gold);"></i>
+        </div>
+    </div>
+
+    <!-- Core Values -->
+    <div class="values-section">
+        <div class="values-header">
+            <h2>★ Our gravitational pull ★</h2>
+            <p>Four principles that guide everything we create.</p>
+        </div>
+        <div class="values-grid">
+            <div class="value-card">
+                <div class="value-icon"><i class="fas fa-hand-sparkles"></i></div>
+                <h3>Ethical Alchemy</h3>
+                <p>Transparent supply chains, fair wages, and low-impact materials. We don’t compromise on people or planet.</p>
+            </div>
+            <div class="value-card">
+                <div class="value-icon"><i class="fas fa-infinity"></i></div>
+                <h3>Timeless Design</h3>
+                <p>We reject disposable trends. Our pieces are built to last, both in quality and emotional resonance.</p>
+            </div>
+            <div class="value-card">
+                <div class="value-icon"><i class="fas fa-mask"></i></div>
+                <h3>Radical Inclusivity</h3>
+                <p>Size-inclusive, gender-neutral, and welcoming to all. The cosmos belongs to everyone.</p>
+            </div>
+            <div class="value-card">
+                <div class="value-icon"><i class="fas fa-tree"></i></div>
+                <h3>Carbon-Negative Orbit</h3>
+                <p>We offset 150% of our operational emissions and plant a tree for every order.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Founders / Team Highlight -->
+    <div class="team-spotlight">
+        <h2><i class="fas fa-users"></i> The cosmic collective</h2>
+        <div class="founders">
+            <div class="founder">
+                <div class="avatar"><i class="fas fa-meteor"></i></div>
+                <h4>Jordan Wells</h4>
+                <p>Creative Director & Co-founder</p>
+                <small style="color:#6c3f9e;">“Design is a love letter to the unknown.”</small>
+            </div>
+            <div class="founder">
+                <div class="avatar"><i class="fas fa-star-of-life"></i></div>
+                <h4>Samira Chen</h4>
+                <p>CEO & Sustainability Lead</p>
+                <small style="color:#6c3f9e;">“Fashion should leave a lighter footprint.”</small>
+            </div>
+            <div class="founder">
+                <div class="avatar"><i class="fas fa-globe-americas"></i></div>
+                <h4>Elara Voss</h4>
+                <p>Community & Operations</p>
+                <small style="color:#6c3f9e;">“Our community IS the nebula.”</small>
+            </div>
+        </div>
+        <p style="text-align: center; margin-top: 2rem; font-size: 0.9rem;">+ a stellar team of artists, dreamers, and logistics wizards</p>
+    </div>
+
+    <!-- Impact numbers: tangible -->
+    <div class="impact-block">
+        <div class="impact-item">
+            <div class="impact-number">12k+</div>
+            <p>Trees planted through our reforestation program</p>
+        </div>
+        <div class="impact-item">
+            <div class="impact-number">98%</div>
+            <p>Plastic-free packaging & recycled materials</p>
+        </div>
+        <div class="impact-item">
+            <div class="impact-number">15+</div>
+            <p>Global artisan partnerships (fair trade certified)</p>
+        </div>
+    </div>
+
+    <!-- Sustainability statement + CTA -->
+    <div style="background: #fdf7f0; border-radius: 36px; padding: 2rem; margin: 1rem 0 1.5rem; text-align: center;">
+        <i class="fas fa-leaf" style="font-size: 2rem; color: var(--primary-glow);"></i>
+        <h3 style="margin: 0.5rem 0; font-weight: 700;">Join our low-waste revolution</h3>
+        <p style="max-width: 600px; margin: 0.5rem auto;">Every purchase funds carbon removal and community education. Together, we can make commerce a force for good.</p>
+    </div>
+
+    <!-- Back to shop / homepage -->
+    <div class="back-link">
+        <a href="#" class="btn-back" id="backToHomeBtn"><i class="fas fa-arrow-left"></i> Explore the bazaar</a>
+    </div>
+</div>
+
+<!-- Footer -->
+<footer>
+    
+</footer>
+
+<script>
+    // simple interactions + back button demo
+    const backBtn = document.getElementById('backToHomeBtn');
+    if (backBtn) {
+        backBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            alert('🌠 Welcome back to the NEBULA BAZAAR — where every product tells a story.');
+            // in a full site this would point to index.html
+            window.location.href = '#';
+        });
+    }
+
+    // interactive nav icons for demo
+    const bagIcon = document.querySelector('.fa-shopping-bag');
+    if(bagIcon) {
+        bagIcon.addEventListener('click', () => {
+            alert('🛸 Your cosmic bag awaits — discover our mission-driven products!');
+        });
+    }
+    const heartIcon = document.querySelector('.fa-heart');
+    if(heartIcon) {
+        heartIcon.addEventListener('click', () => {
+            alert('❤️ Save pieces that resonate with your values — wishlist coming soon!');
+        });
+    }
+    // subtle greeting in console, optional
+    console.log('✨ NEBULA BAZAAR — Where the cosmos meets your style. ✨');
+</script>
+</body>
+</html>
