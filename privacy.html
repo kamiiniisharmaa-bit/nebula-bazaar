@@ -1,0 +1,534 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>NEBULA BAZAAR — Privacy Policy · Cosmic Data Stewardship</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: #fefaf5;
+            color: #1a1a2c;
+            line-height: 1.5;
+        }
+
+        :root {
+            --primary-deep: #2c1a4d;
+            --primary-glow: #6c3f9e;
+            --accent-gold: #e2b87a;
+            --accent-coral: #f2645a;
+            --soft-lavender: #f2e9ff;
+            --card-bg: #ffffff;
+            --shadow-sm: 0 8px 20px rgba(0, 0, 0, 0.03), 0 2px 6px rgba(0, 0, 0, 0.05);
+            --border-light: #ede6dc;
+        }
+
+        .container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 28px;
+        }
+
+        /* header / navigation (consistent with brand) */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.2rem 0;
+            flex-wrap: wrap;
+            gap: 20px;
+            border-bottom: 1px solid var(--border-light);
+        }
+
+        .logo-area {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .brand-icon {
+            background: linear-gradient(135deg, var(--primary-deep), var(--primary-glow));
+            width: 44px;
+            height: 44px;
+            border-radius: 32px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 26px;
+            color: var(--accent-gold);
+            box-shadow: 0 4px 12px rgba(108, 63, 158, 0.25);
+        }
+
+        .brand-name {
+            font-size: 1.85rem;
+            font-weight: 800;
+            letter-spacing: -0.02em;
+            background: linear-gradient(120deg, #2c1a4d 20%, #b25f9a 80%);
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+        }
+
+        .brand-name span {
+            font-weight: 400;
+            color: var(--accent-coral);
+            background: none;
+            -webkit-background-clip: unset;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            font-weight: 500;
+            color: #2d2f3e;
+            transition: all 0.2s ease;
+            font-size: 1rem;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary-glow);
+        }
+
+        .nav-icons {
+            display: flex;
+            gap: 1.2rem;
+            font-size: 1.3rem;
+        }
+
+        .nav-icons i {
+            cursor: pointer;
+            transition: all 0.2s ease;
+            color: #2d2f3e;
+        }
+
+        .nav-icons i:hover {
+            color: var(--accent-coral);
+        }
+
+        /* privacy hero section */
+        .privacy-hero {
+            background: linear-gradient(115deg, #f9efff 0%, #fff3e8 100%);
+            border-radius: 48px;
+            margin: 2rem 0 2rem 0;
+            padding: 2.2rem 2.5rem;
+            text-align: center;
+        }
+
+        .privacy-hero h1 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            letter-spacing: -0.02em;
+            background: linear-gradient(135deg, #2c1a4d, #7a4ea8);
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+            margin-bottom: 0.75rem;
+        }
+
+        .privacy-hero p {
+            color: #4a4a5a;
+            max-width: 680px;
+            margin: 0 auto;
+        }
+
+        .last-updated {
+            display: inline-block;
+            background: rgba(108, 63, 158, 0.12);
+            padding: 0.25rem 1rem;
+            border-radius: 50px;
+            font-size: 0.75rem;
+            margin-top: 1rem;
+            font-weight: 500;
+            color: var(--primary-glow);
+        }
+
+        /* main privacy card */
+        .privacy-content {
+            background: var(--card-bg);
+            border-radius: 48px;
+            padding: 2.5rem 2.8rem;
+            margin: 1.5rem 0 3rem;
+            box-shadow: var(--shadow-sm);
+            border: 1px solid #f1eae2;
+        }
+
+        .privacy-section {
+            margin-bottom: 2.5rem;
+        }
+
+        .privacy-section h2 {
+            font-size: 1.7rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: var(--primary-deep);
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .privacy-section h2 i {
+            color: var(--accent-gold);
+            font-size: 1.6rem;
+        }
+
+        .privacy-section h3 {
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin: 1.2rem 0 0.5rem 0;
+            color: #3b2b54;
+        }
+
+        .privacy-section p {
+            margin-bottom: 0.9rem;
+            color: #2d2f3e;
+            font-weight: 400;
+            line-height: 1.6;
+        }
+
+        .privacy-section ul, .privacy-section ol {
+            margin: 0.8rem 0 1rem 1.8rem;
+            color: #2d2f3e;
+        }
+
+        .privacy-section li {
+            margin-bottom: 0.5rem;
+        }
+
+        .highlight-box {
+            background: var(--soft-lavender);
+            border-left: 5px solid var(--primary-glow);
+            padding: 1.2rem 1.5rem;
+            border-radius: 24px;
+            margin: 1.5rem 0;
+            font-size: 0.95rem;
+        }
+
+        .data-table {
+            overflow-x: auto;
+            margin: 1rem 0;
+        }
+        .data-table table {
+            width: 100%;
+            border-collapse: collapse;
+            background: #fefaf5;
+            border-radius: 20px;
+            overflow: hidden;
+        }
+        .data-table th, .data-table td {
+            border: 1px solid #e3d9cf;
+            padding: 12px 16px;
+            text-align: left;
+            font-size: 0.9rem;
+        }
+        .data-table th {
+            background: #f2e9ff;
+            font-weight: 600;
+            color: var(--primary-deep);
+        }
+
+        hr {
+            margin: 1.5rem 0;
+            border: 0;
+            height: 1px;
+            background: linear-gradient(to right, #e2dbd0, transparent);
+        }
+
+        .back-link {
+            text-align: center;
+            margin: 1rem 0 2.5rem;
+        }
+
+        .btn-back {
+            background: transparent;
+            border: 1.5px solid var(--primary-deep);
+            padding: 0.7rem 1.8rem;
+            border-radius: 40px;
+            font-weight: 600;
+            color: var(--primary-deep);
+            transition: all 0.2s ease;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            text-decoration: none;
+        }
+
+        .btn-back:hover {
+            background: var(--primary-deep);
+            color: white;
+            border-color: var(--primary-deep);
+        }
+
+        footer {
+            background: #f9f6f2;
+            padding: 2rem 0 1.5rem;
+            border-top-left-radius: 40px;
+            border-top-right-radius: 40px;
+            margin-top: 1rem;
+        }
+
+        .footer-inner {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 1rem;
+            align-items: center;
+        }
+
+        .footer-copyright {
+            font-size: 0.8rem;
+            color: #6a6d86;
+        }
+
+        .footer-links a {
+            text-decoration: none;
+            color: #4b4e6b;
+            margin-left: 1.5rem;
+            font-size: 0.85rem;
+            font-weight: 500;
+        }
+
+        .footer-links a:hover {
+            color: var(--primary-glow);
+        }
+
+        @media (max-width: 760px) {
+            .navbar {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            .nav-links {
+                flex-wrap: wrap;
+                gap: 1rem;
+            }
+            .privacy-content {
+                padding: 1.5rem;
+            }
+            .privacy-hero h1 {
+                font-size: 1.9rem;
+            }
+            .footer-inner {
+                flex-direction: column;
+                text-align: center;
+            }
+            .footer-links a {
+                margin: 0 0.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <!-- Header identical to brand style -->
+    <nav class="navbar">
+        <div class="logo-area">
+            <div class="brand-icon">
+                <i class="fas fa-glasses"></i>
+            </div>
+            <div class="brand-name">NEBULA <span>BAZAAR</span></div>
+        </div>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="privacy.html">Privacy</a>
+            <a href="terms.html">Terms</a>
+            <a href="about.html">About Us</a>
+            <div class="nav-icons">
+                <i class="far fa-heart"></i>
+                <i class="fas fa-shopping-bag"></i>
+                <i class="far fa-user"></i>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Privacy Hero -->
+    <div class="privacy-hero">
+        <h1>🔭 Privacy Policy · Your Data, Our Promise</h1>
+        <p>At NEBULA BAZAAR, your privacy orbits at the center of everything we do. This policy explains how we collect, use, and protect your personal information across our cosmic marketplace.</p>
+        <div class="last-updated"><i class="far fa-calendar-alt"></i> Effective: June 10, 2026 | Last reviewed: June 10, 2026</div>
+    </div>
+
+    <!-- Main Privacy Content (Detailed) -->
+    <div class="privacy-content">
+        <!-- 1. Information We Collect -->
+        <div class="privacy-section">
+            <h2><i class="fas fa-database"></i> 1. What Information We Collect</h2>
+            <p>We collect information to provide better services, process orders, and create a personalized shopping experience. The types of information include:</p>
+            <div class="data-table">
+                <table>
+                    <thead>
+                        <tr><th>Category</th><th>Examples</th><th>Purpose</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>Identity Data</td><td>Full name, username, date of birth</td><td>Account creation & order verification</td></tr>
+                        <tr><td>Contact Data</td><td>Email address, shipping address, phone number</td><td>Delivery, order updates & customer support</td></tr>
+                        <tr><td>Transaction Data</td><td>Payment details, purchase history, wishlist items</td><td>Process payments & recommendations</td></tr>
+                        <tr><td>Technical Data</td><td>IP address, browser type, device identifiers</td><td>Site security & analytics</td></tr>
+                        <tr><td>Usage Data</td><td>Pages viewed, time spent, click patterns</td><td>Improve user experience & marketing</td></tr>
+                    </tbody>
+                </table>
+            </div>
+            <p>We do not collect sensitive personal data (like biometric or health information) unless you explicitly provide it for a specific purpose (e.g., accessibility requests).</p>
+        </div>
+
+        <!-- 2. How We Collect Data -->
+        <div class="privacy-section">
+            <h2><i class="fas fa-satellite-dish"></i> 2. How We Gather Your Information</h2>
+            <ul>
+                <li><strong>Direct interactions:</strong> When you create an account, place an order, subscribe to our newsletter, or contact support.</li>
+                <li><strong>Automated technologies:</strong> Cookies, beacons, and similar tracking tech as you browse our site.</li>
+                <li><strong>Third-party sources:</strong> Payment processors (Stripe, PayPal) for transaction verification, and shipping carriers for delivery updates.</li>
+            </ul>
+            <div class="highlight-box">
+                <i class="fas fa-cookie-bite"></i> <strong>Cookie Nebula:</strong> We use essential cookies for site functionality and optional analytics cookies. You can manage cookie preferences via your browser settings.
+            </div>
+        </div>
+
+        <!-- 3. How We Use Your Data -->
+        <div class="privacy-section">
+            <h2><i class="fas fa-chart-line"></i> 3. How We Use Your Personal Data</h2>
+            <p>We process your information under legitimate business interests, contract fulfillment, or with your consent. Common uses include:</p>
+            <ul>
+                <li>Process and deliver orders, including payments, returns, and exchanges.</li>
+                <li>Manage your account and provide customer support.</li>
+                <li>Send you transactional emails (order confirmations, shipping updates).</li>
+                <li>Improve our website, products, and personalize recommendations.</li>
+                <li>Send marketing communications (only if you opt-in; you can unsubscribe anytime).</li>
+                <li>Detect fraud, security incidents, and comply with legal obligations.</li>
+            </ul>
+        </div>
+
+        <!-- 4. Sharing Your Data -->
+        <div class="privacy-section">
+            <h2><i class="fas fa-share-alt"></i> 4. When We Share Your Information</h2>
+            <p>We never sell your personal data to third parties. However, we share data with trusted partners to operate our business:</p>
+            <ul>
+                <li><strong>Service providers:</strong> Payment gateways, shipping carriers, email platforms, and analytics (e.g., Google Analytics).</li>
+                <li><strong>Legal compliance:</strong> If required by law, court order, or to protect our rights and safety.</li>
+                <li><strong>Business transfers:</strong> In the event of a merger, acquisition, or asset sale, your data may be transferred with notice.</li>
+            </ul>
+            <p>All third-party partners are contractually obligated to respect your data and use it only for specified services.</p>
+        </div>
+
+        <!-- 5. Data Security & Retention -->
+        <div class="privacy-section">
+            <h2><i class="fas fa-lock"></i> 5. Security & Retention: Your Cosmic Shield</h2>
+            <p>We implement industry-standard security measures (SSL encryption, firewalls, access controls) to protect your data against unauthorized access. However, no internet transmission is 100% secure. We retain your personal information only as long as necessary to fulfill the purposes outlined in this policy — typically 5 years after your last interaction, or as required by tax/legal obligations.</p>
+            <div class="highlight-box">
+                <i class="fas fa-user-secret"></i> <strong>Your responsibility:</strong> Always keep your account credentials confidential. If you suspect any breach, please contact us immediately.
+            </div>
+        </div>
+
+        <!-- 6. Your Privacy Rights -->
+        <div class="privacy-section">
+            <h2><i class="fas fa-star-of-life"></i> 6. Your Rights Over Your Data</h2>
+            <p>Depending on your location (GDPR, CCPA, etc.), you may have the following rights:</p>
+            <ul>
+                <li><strong>Access:</strong> Request a copy of your personal data we hold.</li>
+                <li><strong>Correction:</strong> Update inaccurate or incomplete information.</li>
+                <li><strong>Deletion:</strong> Request erasure of your data (subject to legal exceptions).</li>
+                <li><strong>Opt-out:</strong> Unsubscribe from marketing emails (link in every email).</li>
+                <li><strong>Data Portability:</strong> Receive your data in a structured format.</li>
+            </ul>
+            <p>To exercise any of these rights, contact our Privacy Officer at <strong>privacy@nebulabazaar.com</strong>. We will respond within 30 days. We will never discriminate against you for exercising your privacy rights.</p>
+        </div>
+
+        <!-- 7. Children's Privacy -->
+        <div class="privacy-section">
+            <h2><i class="fas fa-child"></i> 7. Children's Data (Under 16)</h2>
+            <p>NEBULA BAZAAR does not knowingly sell products to children under the age of 16, nor do we intentionally collect personal information from minors. If you believe a child has provided us with personal information, please contact us, and we will delete it promptly.</p>
+        </div>
+
+        <!-- 8. International Data Transfers -->
+        <div class="privacy-section">
+            <h2><i class="fas fa-globe"></i> 8. Interstellar Data Transfers</h2>
+            <p>Our servers and operations are based in the United States. If you access our site from outside the US, please note that your information may be transferred to, stored, and processed in the US, where data protection laws may differ. By using our services, you consent to this transfer. We take steps to ensure appropriate safeguards (e.g., Standard Contractual Clauses) are in place.</p>
+        </div>
+
+        <!-- 9. Third-Party Links -->
+        <div class="privacy-section">
+            <h2><i class="fas fa-external-link-alt"></i> 9. External Links & Social Features</h2>
+            <p>Our website may contain links to partner brands, social media platforms, or user-generated content. We are not responsible for the privacy practices of those third-party websites. We encourage you to read their policies before interacting.</p>
+        </div>
+
+        <!-- 10. Updates to This Policy -->
+        <div class="privacy-section">
+            <h2><i class="fas fa-sync-alt"></i> 10. Changes to Our Privacy Policy</h2>
+            <p>We may update this policy from time to time to reflect changes in practices or legal requirements. The "Effective Date" at the top indicates the latest revision. Material changes will be notified via email or a prominent notice on our website. Your continued use after changes constitutes acceptance of the updated policy.</p>
+        </div>
+
+        <hr>
+
+        <div class="highlight-box" style="background: #fef2e6; border-left-color: var(--accent-coral);">
+            <i class="fas fa-envelope"></i> <strong>Questions about your cosmic data?</strong><br>
+            Our Data Protection Officer is happy to assist. Reach us at <strong>privacy@nebulabazaar.com</strong> or via mail: NEBULA BAZAAR Privacy Dept., 42 Stellar Avenue, Los Angeles, CA 90071.
+        </div>
+    </div>
+
+    <!-- Return button to home -->
+    <div class="back-link">
+        <a href="#" class="btn-back" id="backToHomeBtn"><i class="fas fa-arrow-left"></i> Back to NEBULA BAZAAR</a>
+    </div>
+</div>
+
+<!-- Footer -->
+<footer>
+    
+</footer>
+
+<script>
+    // Consistent interactive elements and back button behavior
+    const backBtn = document.getElementById('backToHomeBtn');
+    if (backBtn) {
+        backBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            alert('🔭 Returning to the NEBULA BAZAAR main galaxy — explore with confidence!');
+            // In a full implementation, redirect to homepage index.html
+            window.location.href = '#'; // placeholder, but allows demo
+        });
+    }
+
+    // Interactive demo for bag/heart icons
+    const bagIcon = document.querySelector('.fa-shopping-bag');
+    if(bagIcon) {
+        bagIcon.addEventListener('click', () => {
+            alert('🛸 Your cosmic bag awaits — we respect your privacy while you shop.');
+        });
+    }
+    const heartIcon = document.querySelector('.fa-heart');
+    if(heartIcon) {
+        heartIcon.addEventListener('click', () => {
+            alert('❤️ Save stellar pieces — your wishlist is private to your account.');
+        });
+    }
+
+    // Smooth scroll for any internal anchors (if needed)
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            const target = this.getAttribute('href');
+            if(target !== "#" && target !== "") {
+                const targetElement = document.querySelector(target);
+                if(targetElement) {
+                    e.preventDefault();
+                    targetElement.scrollIntoView({ behavior: 'smooth' });
+                }
+            }
+        });
+    });
+</script>
+</body>
+</html>
